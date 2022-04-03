@@ -1,0 +1,15 @@
+.idea
+bin
+build
+.gradle
+*.iml
+.env
+*.ipr
+*.iws
+out
+*.retry
+*.DS_Store
+.classpath
+.project
+.settings
+jacoco.xml
