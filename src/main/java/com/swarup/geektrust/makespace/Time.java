@@ -20,7 +20,14 @@ public class Time {
         String[] split = expression.split(":");
         int hours = Integer.parseInt(split[0]);
         int minutes = Integer.parseInt(split[1]);
+        minutesShouldBeMultipleOfFifteen(minutes);
         localTime = LocalTime.of(hours, minutes);
+    }
+
+    private void minutesShouldBeMultipleOfFifteen(int minutes) {
+        if (minutes%15 != 0) {
+            throw new InvalidTime();
+        }
     }
 
     private void validateExpression(String expression) {
@@ -32,6 +39,15 @@ public class Time {
     public LocalTime getLocalTime() {
         return localTime;
     }
+
+    public Integer getHours(){
+        return localTime.getHour();
+    }
+
+    public Integer getMinutes(){
+        return localTime.getMinute();
+    }
+
 
     public boolean isAfter(Time thatTime) {
         return this.getLocalTime().isAfter(thatTime.getLocalTime());

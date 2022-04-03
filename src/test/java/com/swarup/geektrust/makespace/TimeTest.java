@@ -31,16 +31,34 @@ class TimeTest {
     }
 
     @Test
+    void shouldThrowExceptionForMinutesNotMultipleOf15() {
+        assertThatThrownBy(() -> new Time("23:20")).isInstanceOf(InvalidTime.class);
+    }
+
+    @Test
     void shouldCheckIsAfter() {
-        Time thisTime = new Time("23:40");
+        Time thisTime = new Time("23:45");
         Time thatTime = new Time("21:45");
         assertThat(thisTime.isAfter(thatTime)).isTrue();
     }
 
     @Test
     void shouldCompareTime() {
-        Time thisTime = new Time("23:40");
-        Time thatTime = new Time("23:40");
+        Time thisTime = new Time("23:45");
+        Time thatTime = new Time("23:45");
         assertThat(thisTime).isEqualTo(thatTime);
     }
+
+    @Test
+    void shouldGetMinutes() {
+        Time thatTime = new Time("23:45");
+        assertThat(thatTime.getMinutes()).isEqualTo(45);
+    }
+
+    @Test
+    void shouldGetHours() {
+        Time thatTime = new Time("23:45");
+        assertThat(thatTime.getHours()).isEqualTo(23);
+    }
+
 }
