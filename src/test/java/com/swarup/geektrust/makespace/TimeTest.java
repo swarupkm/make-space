@@ -61,4 +61,10 @@ class TimeTest {
         assertThat(thatTime.getHours()).isEqualTo(23);
     }
 
+    @Test
+    void shouldGetTotalMinutes() {
+        Time thatTime = new Time("01:45");
+        assertThat(thatTime.getTotalMinutes()).isEqualTo(105);
+    }
+
 }

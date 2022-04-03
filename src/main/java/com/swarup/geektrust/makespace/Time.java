@@ -48,6 +48,10 @@ public class Time {
         return localTime.getMinute();
     }
 
+    public Integer getTotalMinutes(){
+        return localTime.getHour() * 60 + localTime.getMinute();
+    }
+
 
     public boolean isAfter(Time thatTime) {
         return this.getLocalTime().isAfter(thatTime.getLocalTime());
