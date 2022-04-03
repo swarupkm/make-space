@@ -16,7 +16,7 @@ public class RoomBookingService {
         loadBuffers();
     }
 
-    public void registerRooms(String name, int capacity) {
+    public void registerRoom(String name, int capacity) {
         Room room = new Room(name, capacity);
         buffers.forEach(room::book);
         this.rooms.add(room);

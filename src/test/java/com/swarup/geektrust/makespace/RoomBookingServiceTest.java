@@ -15,8 +15,8 @@ class RoomBookingServiceTest {
     @BeforeEach
     void setUp() {
         service = new RoomBookingService();
-        service.registerRooms(ROOM_NAME_1,2);
-        service.registerRooms(ROOM_NAME_2,10);
+        service.registerRoom(ROOM_NAME_1,2);
+        service.registerRoom(ROOM_NAME_2,10);
 
     }
 
