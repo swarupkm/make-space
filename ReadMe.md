@@ -1,6 +1,6 @@
 # Make Space
 
-The problem statement solved is `https://www.geektrust.com/coding/detailed/make-space`
+The problem statement solved is `https://www.geektrust.com/challenge/make-space`
 
 # Pre-requisites
 * Java 1.11
