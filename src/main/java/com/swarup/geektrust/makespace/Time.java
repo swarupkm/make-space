@@ -36,16 +36,8 @@ public class Time {
         }
     }
 
-    public LocalTime getLocalTime() {
+    private LocalTime getLocalTime() {
         return localTime;
-    }
-
-    public Integer getHours(){
-        return localTime.getHour();
-    }
-
-    public Integer getMinutes(){
-        return localTime.getMinute();
     }
 
     public Integer getTotalMinutes(){
@@ -54,7 +46,7 @@ public class Time {
 
 
     public boolean isAfter(Time thatTime) {
-        return this.getLocalTime().isAfter(thatTime.getLocalTime());
+        return this.localTime.isAfter(thatTime.getLocalTime());
     }
 
     @Override

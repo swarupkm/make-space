@@ -50,18 +50,6 @@ class TimeTest {
     }
 
     @Test
-    void shouldGetMinutes() {
-        Time thatTime = new Time("23:45");
-        assertThat(thatTime.getMinutes()).isEqualTo(45);
-    }
-
-    @Test
-    void shouldGetHours() {
-        Time thatTime = new Time("23:45");
-        assertThat(thatTime.getHours()).isEqualTo(23);
-    }
-
-    @Test
     void shouldGetTotalMinutes() {
         Time thatTime = new Time("01:45");
         assertThat(thatTime.getTotalMinutes()).isEqualTo(105);
